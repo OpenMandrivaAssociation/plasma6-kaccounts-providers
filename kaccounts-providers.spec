@@ -1,6 +1,6 @@
 Summary:        Additional service providers for KAccounts framework
 Name:           kaccounts-providers
-Version: 15.08.1
+Version: 15.08.2
 Release:        1
 License:        GPLv2+
 Group:          System/Base
