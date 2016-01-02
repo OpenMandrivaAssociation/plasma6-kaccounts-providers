@@ -12,15 +12,20 @@ URL:            https://www.kde.org/
 
 BuildRequires:  cmake(ECM)
 BuildRequires:  pkgconfig(Qt5Widgets)
-
+BuildRequires:  pkgconfig(Qt5Core)
+BuildRequires:  pkgconfig(Qt5Qml)
 BuildRequires:  libaccounts-glib-devel
 BuildRequires:  intltool
 BuildRequires:  cmake(KAccounts)
- 
+BuildRequires:  cmake(KF5KIO)
+BuildRequires:  cmake(KF5I18n)
+BuildRequires:  cmake(KF5Declarative)
+BuildRequires:  cmake(KF5Package)
+
 %description
 Additional service providers for KAccounts framework
 
-%files 
+%files
 %_sysconfdir/signon-ui/webkit-options.d/*
 %_kde5_datadir/accounts/providers/google.provider
 
@@ -36,5 +41,3 @@ Additional service providers for KAccounts framework
 
 %install
 %ninja_install -C build
-
-
