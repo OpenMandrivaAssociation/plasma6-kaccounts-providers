@@ -1,15 +1,15 @@
+%define _enable_debug_packages %{nil}
+%define debug_package %{nil}
+
 Summary:        Additional service providers for KAccounts framework
 Name:           kaccounts-providers
-Version: 15.12.0
+Version:		15.12.0
 Release:        2
 License:        GPLv2+
 Group:          System/Base
-Source0:        http://fr2.rpmfind.net/linux/KDE/stable/plasma/%{name}-%{version}.tar.xz
-
-BuildArch:      noarch
-
 URL:            https://www.kde.org/
-
+Source0:        http://download.kde.org/stable/applications/%{version}/%{name}-%{version}.tar.xz
+BuildArch:      noarch
 BuildRequires:  cmake(ECM)
 BuildRequires:  pkgconfig(Qt5Widgets)
 BuildRequires:  pkgconfig(Qt5Core)
@@ -26,18 +26,19 @@ BuildRequires:  cmake(KF5Package)
 Additional service providers for KAccounts framework
 
 %files
-%_sysconfdir/signon-ui/webkit-options.d/*
-%_kde5_datadir/accounts/providers/google.provider
+%{_sysconfdir}/signon-ui/webkit-options.d/*
+%{_qt5_plugins}/kaccounts/ui/*.so
+%{_datadir}/accounts/providers/*.provider
+%{_datadir}/kpackage/genericqml/org.kde.kaccounts.owncloud
 
 #--------------------------------------------------------------------
 
 %prep
 %setup -q 
-%apply_patches
+%cmake_kde5
 
 %build
-%cmake_kde5
-%ninja
+%ninja -C build
 
 %install
 %ninja_install -C build
