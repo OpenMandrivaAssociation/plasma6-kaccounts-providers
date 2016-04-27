@@ -3,12 +3,12 @@
 
 Summary:        Additional service providers for KAccounts framework
 Name:           kaccounts-providers
-Version:    15.12.3
+Version:        16.04.0
 Release:        1
 License:        GPLv2+
 Group:          System/Base
 URL:            https://www.kde.org/
-Source0:        http://download.kde.org/stable/applications/%{version}/%{name}-%{version}.tar.xz
+Source0:        http://download.kde.org/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildArch:      noarch
 BuildRequires:  cmake(ECM)
 BuildRequires:  pkgconfig(Qt5Widgets)
