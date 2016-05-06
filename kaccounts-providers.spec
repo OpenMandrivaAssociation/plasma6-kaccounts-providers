@@ -28,7 +28,7 @@ Additional service providers for KAccounts framework
 %files
 %{_sysconfdir}/signon-ui/webkit-options.d/*
 %{_qt5_plugindir}/kaccounts/ui/*.so
-%{_datadir}/accounts/providers/*.provider
+%{_datadir}/accounts/providers/kde
 %{_datadir}/kpackage/genericqml/org.kde.kaccounts.owncloud
 
 #--------------------------------------------------------------------
