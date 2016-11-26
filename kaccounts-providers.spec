@@ -9,7 +9,6 @@ License:        GPLv2+
 Group:          System/Base
 URL:            https://www.kde.org/
 Source0:        http://download.kde.org/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
-BuildArch:      noarch
 BuildRequires:  cmake(ECM)
 BuildRequires:  pkgconfig(Qt5Widgets)
 BuildRequires:  pkgconfig(Qt5Core)
@@ -23,18 +22,19 @@ BuildRequires:  cmake(KF5Declarative)
 BuildRequires:  cmake(KF5Package)
 
 %description
-Additional service providers for KAccounts framework
+Additional service providers for KAccounts framework.
 
 %files
 %{_sysconfdir}/signon-ui/webkit-options.d/*
 %{_qt5_plugindir}/kaccounts/ui/*.so
 %{_datadir}/accounts/providers/kde
 %{_datadir}/kpackage/genericqml/org.kde.kaccounts.owncloud
+%{_datadir}/metainfo/org.kde.kaccounts.owncloud.appdata.xml
 
 #--------------------------------------------------------------------
 
 %prep
-%setup -q 
+%setup -q
 %cmake_kde5
 
 %build
