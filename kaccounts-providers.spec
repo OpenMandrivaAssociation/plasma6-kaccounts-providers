@@ -3,7 +3,7 @@
 
 Summary:        Additional service providers for KAccounts framework
 Name:           kaccounts-providers
-Version:        16.12.2
+Version:        17.04.0
 Release:        1
 License:        GPLv2+
 Group:          System/Base
@@ -24,7 +24,7 @@ BuildRequires:  cmake(KF5Package)
 %description
 Additional service providers for KAccounts framework.
 
-%files
+%files -f %{name}.lang
 %{_sysconfdir}/signon-ui/webkit-options.d/*
 %{_qt5_plugindir}/kaccounts/ui/*.so
 %{_datadir}/accounts/providers/kde
@@ -42,3 +42,4 @@ Additional service providers for KAccounts framework.
 
 %install
 %ninja_install -C build
+%find_lang %{name}
