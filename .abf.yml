@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   kaccounts-providers-17.12.1.tar.xz: 98e3802d31eeef3118be7d32e71d7efcb00a6b0a
+sources:
+  kaccounts-providers-17.12.2.tar.xz: 6e7d2f54dbfd556ef10d854f9851ade45c02f73c
