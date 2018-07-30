@@ -1,14 +1,15 @@
+%define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 %define _enable_debug_packages %{nil}
 %define debug_package %{nil}
 
 Summary:        Additional service providers for KAccounts framework
 Name:           kaccounts-providers
-Version:         18.04.2
+Version:        18.07.80
 Release:        1
 License:        GPLv2+
 Group:          System/Base
 URL:            https://www.kde.org/
-Source0:        http://download.kde.org/stable/applications/%{version}/src/%{name}-%{version}.tar.xz
+Source0:        http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:  cmake(ECM)
 BuildRequires:  pkgconfig(Qt5Widgets)
 BuildRequires:  pkgconfig(Qt5Core)
