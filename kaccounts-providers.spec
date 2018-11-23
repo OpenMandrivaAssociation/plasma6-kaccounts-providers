@@ -4,8 +4,8 @@
 
 Summary:        Additional service providers for KAccounts framework
 Name:           kaccounts-providers
-Version:        18.08.2
-Release:        2
+Version:        18.08.3
+Release:        1
 License:        GPLv2+
 Group:          System/Base
 URL:            https://www.kde.org/
