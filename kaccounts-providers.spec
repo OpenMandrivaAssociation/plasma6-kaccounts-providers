@@ -4,12 +4,12 @@
 
 Summary:        Additional service providers for KAccounts framework
 Name:           kaccounts-providers
-Version:	19.11.90
+Version:	19.12.0
 Release:	1
 License:        GPLv2+
 Group:          System/Base
 URL:            https://www.kde.org/
-Source0:        http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Source0:        http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:  cmake(ECM)
 BuildRequires:  pkgconfig(Qt5Widgets)
 BuildRequires:  pkgconfig(Qt5Core)
