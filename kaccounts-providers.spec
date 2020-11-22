@@ -4,7 +4,7 @@
 
 Summary:        Additional service providers for KAccounts framework
 Name:           kaccounts-providers
-Version:	20.08.3
+Version:	20.11.80
 Release:	1
 License:        GPLv2+
 Group:          System/Base
@@ -36,6 +36,9 @@ Additional service providers for KAccounts framework.
 %{_datadir}/accounts/services/kde/nextcloud-storage.service
 %{_datadir}/kpackage/genericqml/org.kde.kaccounts.nextcloud
 %{_datadir}/metainfo/org.kde.kaccounts.nextcloud.appdata.xml
+%{_datadir}/accounts/services/kde/owncloud-storage.service
+%{_datadir}/icons/hicolor/*/apps/kaccounts-owncloud.png
+%{_datadir}/icons/hicolor/*/apps/kaccounts-nextcloud.svg
 
 #--------------------------------------------------------------------
 
