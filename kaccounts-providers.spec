@@ -14,6 +14,7 @@ BuildRequires:  cmake(ECM)
 BuildRequires:  pkgconfig(Qt5Widgets)
 BuildRequires:  pkgconfig(Qt5Core)
 BuildRequires:  pkgconfig(Qt5Qml)
+BuildRequires:	cmake(Qt5WebEngine)
 BuildRequires:	cmake(Qt5WebEngineWidgets)
 BuildRequires:  libaccounts-glib-devel
 BuildRequires:  intltool
