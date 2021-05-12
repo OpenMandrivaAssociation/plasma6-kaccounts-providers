@@ -1,10 +1,8 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
-%define _enable_debug_packages %{nil}
-%define debug_package %{nil}
 
 Summary:        Additional service providers for KAccounts framework
 Name:           kaccounts-providers
-Version:	21.04.0
+Version:	21.04.1
 Release:	1
 License:        GPLv2+
 Group:          System/Base
