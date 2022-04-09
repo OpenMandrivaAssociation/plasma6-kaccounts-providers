@@ -2,7 +2,7 @@
 
 Summary:        Additional service providers for KAccounts framework
 Name:           kaccounts-providers
-Version:	22.03.80
+Version:	22.03.90
 Release:	1
 License:        GPLv2+
 Group:          System/Base
