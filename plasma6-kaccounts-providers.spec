@@ -9,11 +9,13 @@ Group:          System/Base
 URL:            https://www.kde.org/
 Source0:        http://download.kde.org/%{stable}/release-service/%{version}/src/kaccounts-providers-%{version}.tar.xz
 BuildRequires:  cmake(ECM)
-BuildRequires:  pkgconfig(Qt6Widgets)
-BuildRequires:  pkgconfig(Qt6Core)
-BuildRequires:  pkgconfig(Qt6Qml)
+BuildRequires:  cmake(Qt6Widgets)
+BuildRequires:  cmake(Qt6Core)
+BuildRequires:  cmake(Qt6Qml)
 BuildRequires:	cmake(Qt6WebEngineCore)
 BuildRequires:	cmake(Qt6WebEngineWidgets)
+BuildRequires:	cmake(Qt6WebEngineQuick)
+BuildRequires:	cmake(Qt6QmlNetworkplugin)
 BuildRequires:  libaccounts-glib-devel
 BuildRequires:  intltool
 BuildRequires:  cmake(KAccounts6)
