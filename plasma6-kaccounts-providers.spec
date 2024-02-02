@@ -2,8 +2,8 @@
 
 Summary:        Additional service providers for KAccounts framework
 Name:           plasma6-kaccounts-providers
-Version:	24.01.90
-Release:	3
+Version:	24.01.95
+Release:	1
 License:        GPLv2+
 Group:          System/Base
 URL:            https://www.kde.org/
