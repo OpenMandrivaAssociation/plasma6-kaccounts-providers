@@ -1,13 +1,20 @@
+%define git 20240218
+%define gitbranch release/24.02
+%define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Summary:        Additional service providers for KAccounts framework
 Name:           plasma6-kaccounts-providers
-Version:	24.01.95
-Release:	1
+Version:	24.01.96
+Release:	%{?git:0.%{git}.}1
 License:        GPLv2+
 Group:          System/Base
 URL:            https://www.kde.org/
+%if 0%{?git:1}
+Source0:	https://invent.kde.org/network/kaccounts-providers/-/archive/%{gitbranch}/kaccounts-providers-%{gitbranchd}.tar.bz2#/kaccounts-providers-%{git}.tar.bz2
+%else
 Source0:        http://download.kde.org/%{stable}/release-service/%{version}/src/kaccounts-providers-%{version}.tar.xz
+%endif
 BuildRequires:  cmake(ECM)
 BuildRequires:  cmake(Qt6Widgets)
 BuildRequires:  cmake(Qt6Core)
@@ -42,7 +49,7 @@ Additional service providers for KAccounts framework.
 #--------------------------------------------------------------------
 
 %prep
-%autosetup -p1 -n kaccounts-providers-%{?git:master}%{!?git:%{version}}
+%autosetup -p1 -n kaccounts-providers-%{?git:%{gitbranchd}}%{!?git:%{version}}
 %cmake \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
 	-G Ninja
