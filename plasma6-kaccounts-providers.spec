@@ -23,6 +23,7 @@ BuildRequires:	cmake(Qt6WebEngineCore)
 BuildRequires:	cmake(Qt6WebEngineWidgets)
 BuildRequires:	cmake(Qt6WebEngineQuick)
 BuildRequires:	cmake(Qt6QmlNetworkplugin)
+BuildRequires:	cmake(QCoro6)
 BuildRequires:  libaccounts-glib-devel
 BuildRequires:  intltool
 BuildRequires:  cmake(KAccounts6)
