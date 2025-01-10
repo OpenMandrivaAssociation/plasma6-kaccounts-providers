@@ -5,7 +5,7 @@
 
 Summary:        Additional service providers for KAccounts framework
 Name:           plasma6-kaccounts-providers
-Version:	24.12.0
+Version:	24.12.1
 Release:	%{?git:0.%{git}.}1
 License:        GPLv2+
 Group:          System/Base
