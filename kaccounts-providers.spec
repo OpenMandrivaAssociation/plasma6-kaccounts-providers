@@ -4,7 +4,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Summary:        Additional service providers for KAccounts framework
-Name:           plasma6-kaccounts-providers
+Name:           kaccounts-providers
 Version:	25.04.0
 Release:	%{?git:0.%{git}.}1
 License:        GPLv2+
