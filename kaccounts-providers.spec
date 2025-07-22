@@ -5,7 +5,7 @@
 
 Summary:        Additional service providers for KAccounts framework
 Name:           kaccounts-providers
-Version:	25.04.0
+Version:	25.04.3
 Release:	%{?git:0.%{git}.}1
 License:        GPLv2+
 Group:          System/Base
@@ -32,6 +32,11 @@ BuildRequires:  cmake(KF6I18n)
 BuildRequires:  cmake(KF6Declarative)
 BuildRequires:  cmake(KF6Package)
 
+%rename plasma6-kaccounts-providers
+
+BuildSystem:	cmake
+BuildOption:	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON
+
 %description
 Additional service providers for KAccounts framework.
 
@@ -46,18 +51,3 @@ Additional service providers for KAccounts framework.
 %{_datadir}/accounts/services/kde/owncloud-storage.service
 %{_datadir}/icons/hicolor/*/apps/kaccounts-owncloud.png
 %{_datadir}/icons/hicolor/*/apps/kaccounts-nextcloud.svg
-
-#--------------------------------------------------------------------
-
-%prep
-%autosetup -p1 -n kaccounts-providers-%{?git:%{gitbranchd}}%{!?git:%{version}}
-%cmake \
-	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
-	-G Ninja
-
-%build
-%ninja -C build
-
-%install
-%ninja_install -C build
-%find_lang kaccounts-providers
